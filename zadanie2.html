@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+	<meta charset="utf-8"/>
+	
+	<script type="text/javascript">
+		function wypisz()
+		{
+			var liczba1 = document.getElementById("pole1").value;
+			var liczba2 = document.getElementById("pole2").value;
+			var napis = "";
+			if (isNaN(liczba1) && isNaN(liczba2))
+			{
+				napis = "Błędnie podane liczby!";
+			}
+			else if (isNaN(liczba1))
+			{
+				napis = "Lewa wartość nie jest liczbą";
+			}
+			else if (isNaN(liczba2))
+			{
+				napis = "Prawa wartość nie jest liczbą";
+			}
+			else if (liczba1 == liczba2)
+			{
+				napis = "Liczby mają tę samą wartość!";
+			}
+			else if (parseInt(liczba2) > parseInt(liczba1))
+			{
+				for(i= parseInt(liczba1); i <= parseInt(liczba2); i++)
+				{
+					napis += i + " ";
+				}
+			}
+			else if (parseInt(liczba2) < parseInt(liczba1))
+			{
+				for(i= parseInt(liczba1); i >= parseInt(liczba2); i--)
+				{
+					napis += i + " ";
+				}
+			}
+			else
+			{
+				napis = "BŁĄD! Nigdy tutaj nie powinniśmy dotrzeć!";
+			}
+			document.getElementById("wynik").innerHTML = napis;
+		}
+	</script>
+</head>
+
+<body>
+	<input type="text" id="pole1"/>
+	<input type="text" id="pole2"/>
+	<input type="submit" value="Pokaż" onclick="wypisz()"/>
+
+	<div id="wynik"></div>
+</body>
+
+</html>
