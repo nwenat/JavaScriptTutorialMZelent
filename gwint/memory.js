@@ -106,7 +106,7 @@ function hide2Cards(nr1, nr2)
 	pairsLeft--;
 	if(pairsLeft == 0)
 	{
-		$('.board').html('<h1>You win!<br>Done in '+turnCounter+' turns</h1>');
+		$('.board').html('<h1>You win!<br>Done in '+turnCounter+' turns</h1> <br/> <br/> <span class="reset" onclick="location.reload()">JESZCZE RAZ?</span>');
 	}
 	lock = false;
 }

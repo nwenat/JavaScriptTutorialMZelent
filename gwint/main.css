@@ -12,6 +12,17 @@ a:visited { color: #209781; }
 a:active  { color: #209781; }
 a:hover   { color: #E9B64A; }
 
+span
+{
+	cursor: pointer;
+	font-size: 64px;
+	font-weight: 400;
+}
+span:link    { color: #209781; text-decoration: none; }
+span:visited { color: #209781; }
+span:active  { color: #209781; }
+span:hover   { color: #E9B64A; }
+
 h1
 {
 	font-size: 64px;
