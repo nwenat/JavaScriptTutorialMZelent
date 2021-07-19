@@ -1,5 +1,13 @@
-
 var cards = ["ciri.png", "geralt.png", "jaskier.png", "jaskier.png", "iorweth.png", "triss.png", "geralt.png", "yen.png", "ciri.png", "triss.png", "yen.png", "iorweth.png"];
+
+function shuffleArray(array) {
+    for (i = array.length - 1; i > 0; i--) {
+        var j = Math.floor(Math.random() * (i + 1));
+        var temp = array[i];
+        array[i] = array[j];
+        array[j] = temp;
+    }
+}
 
 //alert(cards[4]);
 
@@ -42,6 +50,7 @@ var visible_nr;
 var lock = false;
 var pairsLeft = 6;
 
+shuffleArray(cards);
 
 function revealCard(nr)
 {
